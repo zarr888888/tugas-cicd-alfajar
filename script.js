@@ -12,7 +12,7 @@ function mulaiSerangan() {
     btn.disabled = true; 
 
     setTimeout(() => {
-        statusText.innerText = "✅ BENTENG DITAKLUKKAN (200 OK)!";
+        statusText.innerText = "BENTENG DITAKLUKKAN (200 OK)!";
         statusText.style.color = "#00ff00"; 
 
         scroll.classList.remove('hidden');
@@ -20,7 +20,7 @@ function mulaiSerangan() {
         btn.innerHTML = "🚩 KEMENANGAN TOTAL 🚩";
         btn.style.background = "linear-gradient(to bottom, #27ae60, #219653)";
 
-        alert("ALLAHU AKBAR! Deployment Berhasil, Sultanku! 🏰🔥");
+        alert("ALLAHU AKBAR! Deployment Berhasil, Sultanku! 🔥");
 
     }, 2500);
 }
