@@ -1,0 +1,150 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: linear-gradient(to bottom, #2b0a0a, #0f0202);
+    color: #f4e4bc; 
+    font-family: 'Crimson Text', serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 10px solid #5c1e1e; 
+}
+
+.main-container {
+    background: rgba(43, 10, 10, 0.8); 
+    border: 3px solid #cfa555; 
+    padding: 40px;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 0 50px rgba(207, 165, 85, 0.3); 
+    position: relative;
+    overflow: hidden;
+}
+
+.main-container::before, .main-container::after {
+    content: '⚔️';
+    position: absolute;
+    font-size: 30px;
+    color: #cfa555;
+}
+.main-container::before { top: 10px; left: 10px; }
+.main-container::after { bottom: 10px; right: 10px; transform: scaleX(-1); }
+
+header { margin-bottom: 30px; }
+
+.subtitle {
+    color: #cfa555;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.main-title {
+    font-family: 'Cinzel Decorative', cursive; 
+    font-size: 3rem;
+    color: #e74c3c;
+    text-shadow: 2px 2px 0px #cfa555, 4px 4px 10px black; 
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.juluukan {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #cfa555;
+}
+
+.divider {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #cfa555, transparent);
+    margin: 20px auto;
+    width: 60%;
+}
+
+.content-war {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    text-align: left;
+    border: 1px solid #5c1e1e;
+    padding: 20px;
+    background: rgba(0,0,0,0.3);
+}
+
+.ottoman-emblem {
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #cfa555, #7a5723);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    color: #2b0a0a;
+    border: 4px solid #5c1e1e;
+    box-shadow: 0 0 20px #cfa555;
+}
+
+.historical-text h3 { color: #cfa555; }
+.war-stats { list-style: none; margin-top: 15px; font-family: monospace; }
+.war-stats li { margin-bottom: 5px; }
+#mission-status { color: #e74c3c; font-weight: bold; }
+
+#attackBtn {
+    background: linear-gradient(to bottom, #cfa555, #a37a30);
+    color: #2b0a0a;
+    border: none;
+    padding: 15px 40px;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 3px solid #5c1e1e;
+    transition: 0.3s;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.4);
+}
+
+#attackBtn:hover {
+    background: linear-gradient(to bottom, #e74c3c, #96231a);
+    color: #cfa555;
+    box-shadow: 0 0 30px #e74c3c;
+    transform: scale(1.05);
+}
+
+#secret-scroll {
+    margin-top: 30px;
+    background: #f4e4bc; 
+    color: #2b0a0a;
+    padding: 20px;
+    border: 3px dashed #5c1e1e;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in;
+    position: relative;
+}
+
+#secret-scroll::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    box-shadow: inset 0 0 20px #5c1e1e;
+    pointer-events: none;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    .content-war { flex-direction: column; text-align: center; }
+    .main-title { font-size: 2rem; }
+}
